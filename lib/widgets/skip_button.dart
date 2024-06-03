@@ -9,8 +9,9 @@ import '../util/theme.dart';
 class SkipButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String title;
+  final Color color;
 
-  const SkipButton({Key? key, required this.onPressed, required this.title})
+  const SkipButton({Key? key, required this.onPressed, required this.title ,required this.color})
       : super(key: key);
 
   @override
@@ -24,14 +25,15 @@ class SkipButton extends StatelessWidget {
         onPressed: onPressed,
         child: Ink(
           decoration: BoxDecoration(
-            color: ThemeProvider.primary,
+           // color: ThemeProvider.primary,
+            color: color,
               /*gradient:  LinearGradient(
                   colors: [ThemeProvider.primary]),*/
               borderRadius: BorderRadius.circular(50)),
           child: Container(
             margin: EdgeInsets.all(0),
             width: Get.width,
-            height: 60,
+            height: 56,
             alignment: Alignment.center,
             child: Text(title,
                 style: TextStyle(

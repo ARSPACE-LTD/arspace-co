@@ -53,4 +53,9 @@ class AssetPath {
   static final ar_icon = _imagesPath("ar_icon.png");
   static final scan_png = _imagesPath("scan.png");
   static final order_png = _imagesPath("order_list.png");
+  static final briefcase = _imagesPath("briefcase.png");
+  static final alert = _imagesPath("alert.png");
+  static final alert_1 = _imagesPath("alert_1.png");
+  static final approve_badge_bule = _imagesPath("approve_badge_bule.png");
+  static final approve_badge_yellow = _imagesPath("approve_badge_yellow.png");
 }

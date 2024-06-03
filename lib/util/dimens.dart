@@ -67,6 +67,8 @@ class Dimens {
   static final fiftyEight = 58.0 ;
   static final fiftyNine = 59.0 ;
   static final sixty = 60.0;
+  static final loder_size = 60.0;
+
 
   static final sixtyOne = 61.0 ;
   static final sixtyTwo = 62.0 ;

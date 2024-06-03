@@ -23,6 +23,12 @@ class AppString {
   static String login_button = "Log in";
   static String scan_icket = "scan ticket";
   static String history = "History";
+  static String view_order = "View order";
+  static String awsome_good_to_go = "AWSOME! GOOD TO GO";
+  static String next_ticket = "Next Ticket";
+  static String ticket_has_been_scanned = "OOPS! Ticket has been scanned";
+  static String ticket_has_expired = "OOPS! Ticket has expired";
+  static String ticket_not_valid = "OOPS! Ticket is not valid";
 
 
 }

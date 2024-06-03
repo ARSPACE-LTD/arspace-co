@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 const typeTheme = Typography.whiteMountainView;
 
 class ThemeProvider {
+  static Color loader_color = Color(0xFFFFFFFF);
   static Color buttonfirstClr = Color(0xFFA154FF);
   static Color buttonSecondClr = Color(0xFFFF3062);
   static Color buttonThirdClr = Color(0xFFFF6230);
@@ -12,16 +13,20 @@ class ThemeProvider {
   static Color buttonColors = Color(0xFF6161FF);
   static Color text_background = Color(0xFF22242B);
   static Color text_light_gray= Color(0xFFA7A9B1);
+  static Color text_littel_light_gray= Color(0xFFA6AAC5);
   static Color text_color = Color(0xFF616161);
   static Color bold_text_color = Color(0xFF2E3456);
   static Color secondary = Color(0xFF094268);
   static Color buttonborderColors = Color(0xFF8146FF);
   static Color primary = Color(0xFF8146FF);
+  static Color error = Color(0xFFFF3062);
   static Color light_primary = Color(0xFFD2BFFF);
   static const appColor = Color(0xFF8146FF);
   static const secondaryAppColor = Color(0xFF8146FF);
   static const whiteColor = Colors.white;
   static const blackColor = Color(0xFF000000);
+  static const blueColor = Color(0xFF2F80ED);
+  static const blue_light_Color = Color(0xFFA0BADC);
   static const greyColor = Color(0xFF4D4F5D);
   static const backgroundColor = Color(0xFFF3F3F3);
   static const match_background_light = Color(0xFF1D1B62);
@@ -30,6 +35,7 @@ class ThemeProvider {
   static const orangeColor = Color(0xFFFF9900);
   static const greenColor = Color(0xFF32CD32);
   static const redColor = Color(0xFFFF0000);
+  static const light_redColor = Color(0xFFF6C6C6);
   static const buttonColor = Color(0xFF22242B);
   static const iconColor = Color(0xFF4D4F5D);
   static const dividerColor = Color(0xFF2F323F);

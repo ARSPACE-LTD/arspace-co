@@ -12,15 +12,15 @@ class LoginState {
   LoginState({required this.sharedPreferencesManager, required this.apiService});
 
 
-  Future<Response> loginPhoneNumber(dynamic body) async {
+  Future<Response> loginWithEmail(dynamic body) async {
     var response = await apiService.postPublic(AppConstants.login_api, body);
     return response;
   }
 
-  Future<Response> updateDeviceToken(dynamic body) async {
+/*  Future<Response> updateDeviceToken(dynamic body) async {
     var response = await apiService.putPrivate(AppConstants.completeProfile_api, body , sharedPreferencesManager.getString('token') ?? '');
     return response;
-  }
+  }*/
 
   void saveToken(String token) {
     sharedPreferencesManager.putString('token', token);

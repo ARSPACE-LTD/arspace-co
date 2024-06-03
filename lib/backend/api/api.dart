@@ -225,6 +225,22 @@ class ApiService extends GetxService {
     }
   }
 
+  Future<Response> postPrivateWithoutBody(
+      String uri,
+      String token,
+      ) async {
+    try {
+      http.Response response = await http.post(Uri.parse(appBaseUrl + uri),
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Token $token'
+          }).timeout(Duration(seconds: timeoutInSeconds));
+      return parseResponse(response, uri);
+    } catch (e) {
+      return const Response(statusCode: 1, statusText: connectionIssue);
+    }
+  }
+
   Future<Response> logout(
     String uri,
     String token,

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../backend/api/handler.dart';
 import '../../backend/helper/app_router.dart';
 import '../../util/constants.dart';
+import '../../util/dimens.dart';
 import '../../util/theme.dart';
 import '../../util/toast.dart';
 import 'login_state.dart';
@@ -31,44 +33,33 @@ class LoginLogic extends GetxController {
 
   }
 
-  Future<void> onLoginClicked() async {
+  Future<void> onLoginClicked(BuildContext context) async {
     var body = {
       // "email": countryCodeController.text,
       "username": userNameController.text.toString(),
       "password": passwordController.text.toString(),
+      "is_staff": true
     };
 
     //HtmlLoader();
     // htmlLoaderController.startLoading();
 
 
-    Get.dialog(
-        SimpleDialog(
-          children: [
-            Row(
-              children: [
-                const SizedBox(
-                  width: 30,
-                ),
-                const CircularProgressIndicator(
-                  color: ThemeProvider.appColor,
-                ),
-                const SizedBox(
-                  width: 30,
-                ),
-                SizedBox(
-                    child: Text(
-                      "Please wait".tr,
-                      style: const TextStyle(fontFamily: 'bold'),
-                    )),
-              ],
-            )
-          ],
-        ),
-        barrierDismissible: false);
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return Center(
+          child: LoadingAnimationWidget.threeRotatingDots(
+            color: ThemeProvider.loader_color,
+            size: Dimens.loder_size,
+          ),
+        ); // Display the custom loader
+      },
+    );
 
-    var response = await state.loginPhoneNumber(body);
-    Get.back();
+    var response = await state.loginWithEmail(body);
+    Navigator.of(context).pop();
 
     if (response.statusCode == 200) {
       Map<String, dynamic> myMap = Map<String, dynamic>.from(response.body);
@@ -107,7 +98,7 @@ class LoginLogic extends GetxController {
     update();
   }
 
-  Future<void> UpdateDeviceToken() async {
+  /*Future<void> UpdateDeviceToken() async {
     var body = {
       // "email": countryCodeController.text,
       "device_token": AppConstants.fcm_token,
@@ -141,5 +132,5 @@ class LoginLogic extends GetxController {
       update();
     }
     update();
-  }
+  }*/
 }
