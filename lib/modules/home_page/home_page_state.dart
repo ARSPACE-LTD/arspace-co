@@ -25,4 +25,11 @@ class Home_pageState {
     }
   }
 
+
+  Future<Response> deleteAccount() async {
+    return await apiService.deleteAccount(AppConstants.delete_account,
+        sharedPreferencesManager.getString('token') ?? '');
+  }
+
+
 }

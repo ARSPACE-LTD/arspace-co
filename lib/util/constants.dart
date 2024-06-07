@@ -8,6 +8,7 @@ class AppConstants {
   static const String ticket_history = 'order/history';
   static const String check_ticket = 'order';
   static const String logOut_api = 'auth/logout';
+  static const String delete_account = 'profile';
 
 }
 

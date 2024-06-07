@@ -202,6 +202,77 @@ class _Home_pagePageState extends State<Home_pagePage> {
 
                         },
                       ),
+                      PopupMenuItem(
+                        child: Text('Delete Account'),
+                        value: 'Delete Account',
+                        onTap: () async {
+
+                          await showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return Container(
+                                height: 300,
+                                child: AlertDialog(
+                                  backgroundColor: Color(0xFF2F323F),
+                                  title: Column(
+                                    children: [
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Center(
+                                        child: Text(
+                                          "Are you sure you want to delete this account?",
+                                          style: TextStyle(
+                                              color: ThemeProvider
+                                                  .whiteColor,
+                                              fontFamily: "Intern"),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 30,
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                        MainAxisAlignment
+                                            .spaceBetween,
+                                        children: [
+                                          Container(
+                                            width: 80,
+                                            height: 35,
+                                            child: SubmitButton(
+                                              onPressed: () => {
+
+                                                logic.deleteAccount(context),
+                                                Navigator.of(context).pop(),
+                                              },
+                                              title: "Yes",
+                                            ),
+                                          ),
+                                          Container(
+                                            width: 80,
+                                            height: 35,
+                                            child: SubmitButton(
+                                              onPressed: () => {
+                                                Navigator.of(context)
+                                                    .pop()
+                                              },
+                                              title: "No",
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              );
+                            },
+                          );
+
+                        },
+                      ),
 
                     ];
                   },
