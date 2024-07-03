@@ -19,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.01</string>
+	<string>1.2.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -27,7 +27,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-    <string>This app requires camera access to scan QR codes for event tickets.</string>
+	<string>This app requires camera access to scan QR codes for event tickets.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app requires photo gallery access to scan event tickets.</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>

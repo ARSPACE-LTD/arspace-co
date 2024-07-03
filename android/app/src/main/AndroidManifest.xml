@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.arspace_co_technology">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
    <application
         android:label="Arspace.co"
         android:name="${applicationName}"

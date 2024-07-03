@@ -36,8 +36,8 @@ class LoginLogic extends GetxController {
   Future<void> onLoginClicked(BuildContext context) async {
     var body = {
       // "email": countryCodeController.text,
-      "username": userNameController.text.toString(),
-      "password": passwordController.text.toString(),
+      "username": userNameController.text.toString().trim(),
+      "password": passwordController.text.toString().trim(),
       "is_staff": true
     };
 
